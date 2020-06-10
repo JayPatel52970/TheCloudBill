@@ -1,3 +1,577 @@
-<p>This is App Component</p>
-<!--<router-outlet></router-outlet>-->
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>
+    </ul>
 
+    <!-- SEARCH FORM -->
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+
+
+      <!--My Company Info  Navigation Links-->
+      <li class="nav-item has-treeview">
+        <a href="#" class="nav-link">
+          <!-- This reports will open a company page which contains tab formated fields.-->
+          <p class="text-bold">
+            Welcome, My Company Name
+          </p>
+        </a>
+
+      </li>
+      <!-- Messages Dropdown Menu -->
+      <!-- User Profile Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="fas fa-user-circle fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header text-bold">My Profile Name</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-cog mr-2"></i> Preferences
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-comment-alt mr-2"></i>Feedback
+          </a>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-item">
+            <i class="fas fa-moon mr-2"></i>Night Mode
+            <span class="float-right text-muted text-sm">
+              <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch>
+
+            </span>
+
+
+          </div>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+
+            <i class="fas fa-sign-out-alt mr-2"></i> Log Out
+          </a>
+          <span class="text-success text-center text-muted text-sm">
+            <p class="text-center">TheCloudBill Inc.</p>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-light-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="https://www.thecloudbill.com" class="brand-link">
+      <img src="./assets/dist/tTCB.png" alt="TCB logo" class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-bold">TheCloudBill</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <!--<div class="user-panel mt-2 pb-2 d-flex">
+        <div class="image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Himaliyan Imports</a>
+        </div>
+      </div>-->
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column nav-compact nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+          with font-awesome or any other icon font library -->
+          <li class="nav-item has-treeview menu-open">
+            <a asp-action="Index" asp-controller="Home" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+
+          </li>
+          <li class="nav-header text-bold">Transactions</li>
+          <!--Sales Navigation Links-->
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-file-alt"></i>
+              <p class="">
+                Sales
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-primary"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Quotation</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+
+
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-primary"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Tax Invoice</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-primary"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Bill Of Supply</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-primary"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Delivery Challan</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-primary"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Counter Sale</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-primary"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Credit Note</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-primary"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Payment Receive</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-primary"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Clients</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+          <!--Purchase Navigation Links-->
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-file-invoice-dollar"></i>
+              <p class="">
+                Purchases
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-warning"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Purchase</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+
+
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-warning"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Expenses</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-warning"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Debit Note</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-warning"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Vendors</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-warning"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Payment Made</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+
+
+            </ul>
+          </li>
+
+          <!--Banks Navigation Links-->
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-university"></i>
+              <p class="">
+                Banks
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-info"></i>
+                  <p class="text-dark">
+                    <a asp-controller="Bank" asp-action="index" class="text-dark">Banks</a>
+                    <a asp-controller="Bank" asp-action="Add" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-info"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Credit</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-info"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Debit</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-info"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Statements</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+
+            </ul>
+          </li>
+
+          <!--Items Navigation Links-->
+          <!--<li class="nav-header text-bold mt-0 pb-0">Items</li>-->
+
+          <li class="nav-item has-treeview mt-2">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-box-open"></i>
+              <p class="">
+                Items
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-info"></i>
+                  <p class="text-dark">
+                    <a asp-controller="Item" asp-action="Index" class="text-dark">Item</a>
+                    <a asp-action="Add" asp-controller="Item" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-info"></i>
+                  <p class="text-dark">
+                    <a asp-controller="ItemCategory" asp-action="index" class="text-dark">Item Categories</a>
+                    <a asp-controller="ItemCategory" asp-action="Add" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-info"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Price List</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+
+            </ul>
+          </li>
+
+
+          <!--Clients and Vendors Navigation Links-->
+          <li class="nav-header text-bold">Clients and Vendors</li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-building"></i>
+              <p class="">
+                Clients and Vendors
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-info"></i>
+                  <p class="text-dark">
+                    <a asp-action="ClientList" asp-controller="ClientVendor" class="text-dark">Clients</a>
+                    <a asp-action="Add" asp-controller="ClientVendor" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-info"></i>
+                  <p class="text-dark">
+                    <a asp-action="VendorList" asp-controller="ClientVendor" class="text-dark">Vendors</a>
+                    <a asp-action="Add" asp-controller="ClientVendor" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-info"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Groups</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+          <!--Employees Navigation Links-->
+          <li class="nav-header text-bold">Employees</li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p class="">
+                Employee
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-info"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Employee</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-info"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Department</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-info"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Salary</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+          <!--Account-->
+          <li class="nav-item has-treeview mt-2">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-file-invoice-dollar"></i>
+              <p class="">
+                Account
+                <i class="fas fa-angle-left right"></i>
+
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-info"></i>
+                  <p class="text-dark">
+                    <a asp-controller="Ledger" asp-action="index" class="text-dark">Ledgers</a>
+                    <a asp-controller="Ledger" asp-action="Add" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-info"></i>
+                  <p class="text-dark">
+                    <a asp-controller="LedgerGroup" asp-action="index" class="text-dark">Ledgers Group</a>
+                    <a asp-controller="LedgerGroup" asp-action="Add" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link">
+                  <i class="nav-icon far fa-circle text-info"></i>
+                  <p class="text-dark">
+                    <a href="http://Yahoo.com" class="text-dark">Reports</a>
+                    <a href="http://Google.com" class=" fas fa-plus-circle right fa-lg"></a>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+
+
+
+
+          <!--Reports  Navigation Links-->
+          <li class="nav-item has-treeview mt-2">
+            <a href="#" class="nav-link">
+              <!-- This reports will open a list of repors page and from their individual reports can be open.-->
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p class="">
+                Reports
+              </p>
+            </a>
+          </li>
+
+          <!--My Company Info  Navigation Links-->
+          <li class="nav-item has-treeview mt-2">
+            <a asp-controller="MyCompany" asp-action="index" class="nav-link">
+              <!-- This reports will open a company page which contains tab formated fields.-->
+              <i class="nav-icon fas fa-chess-queen"></i>
+              <p class="">
+                My Company
+              </p>
+            </a>
+          </li>
+
+          <!--Preferences Navigation Links-->
+          <li class="nav-item has-treeview mt-2">
+            <a asp-controller="Preference" asp-action="index" class="nav-link">
+              <!-- This reports will open a company page which contains tab formated fields.-->
+              <i class="nav-icon far fa-circle text-warning"></i>
+              <p class="">
+                Preferences
+              </p>
+            </a>
+          </li>
+
+          <!--Launch TCB CRM-->
+
+          <li class="nav-item has-treeview mt-4">
+            <a href="#" class="nav-link border border-primary">
+              <!-- This reports will open a company page which contains tab formated fields.-->
+              <i class="nav-icon fas fa-circle text-primary"></i>
+              <p class="text-bold text-primary">
+                Launch CRM
+                <i class="fas fa-external-link-alt right"></i>
+              </p>
+            </a>
+          </li>
+
+          <!--Launch TCB Poster-->
+
+          <li class="nav-item has-treeview mt-2">
+            <a href="#" class="nav-link border border-primary">
+              <!-- This reports will open a company page which contains tab formated fields.-->
+              <i class="nav-icon fas fa-circle text-primary"></i>
+              <p class="text-bold text-primary">
+                Launch My Poster
+                <i class="fas fa-external-link-alt right"></i>
+              </p>
+            </a>
+          </li>
+
+
+          <li class="nav-header mt-2 text-bold">Made with <span style="color: #e25555;">&hearts;</span> by Team<span class=""> TheCloudBill</span></li>
+
+
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <strong>&copy;2020 <a href="https://www.thecloudbill.com">TheCloudBill Inc</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 0.0.1
+    </div>
+  </footer>
+  <!-- /.control-sidebar -->
+</div>
