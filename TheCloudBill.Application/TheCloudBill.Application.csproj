@@ -14,4 +14,10 @@
     <ProjectReference Include="..\TheCloudBill.EFCore\TheCloudBill.EFCore.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Tenant\" />
+  </ItemGroup>
+
 </Project>

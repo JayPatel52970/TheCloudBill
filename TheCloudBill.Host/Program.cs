@@ -9,6 +9,8 @@ using Microsoft.Extensions.Logging;
 
 namespace TheCloudBill.Host
 {
+    using Microsoft.Extensions.Hosting;
+
     public class Program
     {
         public static void Main(string[] args)
