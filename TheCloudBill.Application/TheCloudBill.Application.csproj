@@ -15,8 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Common\" />
-    <Folder Include="Extensions\" />
+    <Folder Include="Session\" />
     <Folder Include="Tenant\" />
   </ItemGroup>
 
