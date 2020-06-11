@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TheCloudBill.EFCore.EntityFrameworkCore.CatelogDb
 {
-    class CatelogDbContext : DbContext
+    public class CatelogDbContext : DbContext
     {
         public CatelogDbContext(DbContextOptions<CatelogDbContext>options):base(options)
         {

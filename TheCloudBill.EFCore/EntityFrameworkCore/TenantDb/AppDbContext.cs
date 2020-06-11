@@ -8,7 +8,7 @@ using TheCloudBill.Core.Models;
 
 namespace TheCloudBill.EFCore.EntityFrameworkCore.TenantDb
 {
-    class AppDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, string>
+    public class AppDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, string>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options):base(options)
         {
